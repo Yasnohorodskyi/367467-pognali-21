@@ -2995,6 +2995,11 @@ input[type="checkbox"].visually-hidden {
     background-color: #ffffff; }
   .header--scrolled .header__menu {
     background-color: #ffffff; }
+    .header--scrolled .header__menu--opened .header__menu-items-wrapper {
+      display: block; }
+      @media (min-width: 767px) {
+        .header--scrolled .header__menu--opened .header__menu-items-wrapper {
+          display: contents; } }
   .header--scrolled .header__menu-items-wrapper {
     display: none; }
     @media (min-width: 767px) {
@@ -3241,6 +3246,7 @@ input[type="checkbox"].visually-hidden {
   .header__contacts--opened .header__telephone-image {
     display: none; }
     .header__contacts--opened .header__telephone-image--opened {
+      display: block;
       width: 18px;
       height: 18px;
       fill: #ffd74b; }
@@ -3314,6 +3320,9 @@ input[type="checkbox"].visually-hidden {
   width: 18px;
   height: 18px;
   fill: #161c35; }
+  .header__telephone-image--opened,
+  .header__mail-image--opened {
+    display: none; }
   @media (min-width: 1439px) {
     .header__telephone-image,
     .header__mail-image {
