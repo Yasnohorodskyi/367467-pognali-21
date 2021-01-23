@@ -1,8 +1,11 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+.sort {
+  @include desktop {
+    order: 1;
+  }
+}
 
 .sort__container {
-  padding: 20px 0 28px;
+  padding: 20px 0 25px;
 
   @include tablet {
     padding-top: 45px;
@@ -59,7 +62,7 @@
   }
 
   @include desktop {
-    margin-bottom: 12px;
+    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -106,7 +109,7 @@
   }
 }
 
-.sort__area .level-range__range-wrapper {
+.sort__area .range {
   display: none;
 
   @include tablet {
@@ -170,7 +173,7 @@
   }
 
   &--show .sort__level-range,
-  &--show .level-range__range-wrapper {
+  &--show .range {
     display: block;
   }
 

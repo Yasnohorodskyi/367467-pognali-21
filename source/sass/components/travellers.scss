@@ -1,8 +1,6 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
-
 .travellers {
-  padding-bottom: 50px;
+  margin-bottom: -27px;
+  padding-bottom: 75px;
 
   @include tablet {
     padding-bottom: 85px;
@@ -22,7 +20,7 @@
 }
 
 .travellers__cards-list {
-  margin-bottom: 16px;
+  margin-bottom: 25px;
 }
 
 .travellers .travellers__user-card {
@@ -99,6 +97,9 @@
   display: flex;
   align-items: center;
   align-self: start;
+
+  top: 55px;
+  left: 69px;
 
   @include tablet {
     position: static;
@@ -245,7 +246,7 @@
   grid-column: 1/-1;
   justify-content: start;
 
-  padding: 15px 25px 19px;
+  padding: 14px 25px 21px;
 
   @include tablet {
     grid-column: 2/4;
@@ -263,7 +264,7 @@
 
     margin: 0;
     padding-left: 32px;
-    //padding-bottom: 40px;
+    padding-bottom: 15px;
     padding-right: 60px;
   }
 }
@@ -279,7 +280,7 @@
 .travellers .travellers__fieldset-tovisit {
   grid-column: 1/-1;
 
-  padding-bottom: 14px;
+  padding-bottom: 15px;
 
   @include tablet {
     grid-column: 1/-1;
@@ -309,6 +310,8 @@
 }
 
 .travellers__user-card .user-card__to-visit {
+  padding-left: 5px;
+
   @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -323,6 +326,8 @@
 }
 
 .travellers__user-card .user-card__country-card {
+  margin-bottom: 10px;
+
   @include tablet {
     align-items: center;
 
@@ -364,7 +369,7 @@
   @include tablet {
     margin-left: 12px;
 
-    @include font(20px, 20px, $font-weight-bold);
+    @include font(20px, 20px, $font-weight-medium);
   }
 
   @include desktop {
@@ -375,7 +380,7 @@
 .travellers__user-card .travellers__fieldset-transport {
   grid-column: 1/3;
 
-  padding-top: 23px;
+  padding-top: 20px;
 
   @include tablet {
     grid-column: 4/5;
@@ -393,6 +398,8 @@
 }
 
 .travellers__fieldset-transport .user-card__legend {
+  top: -11px;
+
   @include tablet {
     display: none;
   }
@@ -450,7 +457,7 @@
 .travellers .travellers__fieldset-level {
   grid-column: 3/-1;
 
-  padding-top: 18px;
+  padding-top: 14px;
   padding-bottom: 13px;
 
   @include tablet {
@@ -557,7 +564,7 @@
   }
 }
 
-.travel-list__button-wrapper {
+.travellers__button-wrapper {
   margin-bottom: 20px;
 
   @include tablet {
@@ -565,13 +572,15 @@
   }
 
   @include desktop {
-    margin: 65px 0;
+    margin: 65px 0 70px;
   }
 }
 
 .travellers__button {
   display: flex;
   align-items: center;
+
+  font-weight: 700;
 
   cursor: pointer;
 
@@ -589,6 +598,10 @@
     margin: 0 auto;
 
     @include font(20px, 20px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-left: 345px;
   }
 }
 

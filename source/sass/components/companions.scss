@@ -1,6 +1,3 @@
-@import "../common/variables";
-@import "../common/mixins";
-
 .companions {
   position: relative;
 
@@ -26,7 +23,7 @@
 
   background-image: url("../../img/companions-bg-rect-mobile.png"), url("../../img/rogovaya-bg-companions-mobile.png");
   background-repeat: no-repeat;
-  background-position: 0 55px, 0 325px;
+  background-position: 0 65px, 0 337px;
 
 
   @include tablet {
@@ -46,6 +43,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto min-content;
 
+    padding-top: 185px;
     padding-bottom: 130px;
 
     background-position: 547px 185px, 60px 120px, 190px 435px;
@@ -56,20 +54,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 32px 25px 55px;
+  padding: 33px 24px 55px;
 
   background-image: url("../../img/smolov-companion-bg-mobile.png");
   background-repeat: no-repeat;
   background-position: top right;
 
   @include tablet {
-    padding: 71px 0 60px;
+    padding: 71px 0 58px;
     background-image: none;
   }
 
   @include desktop {
     max-width: 428px;
-    padding: 60px 70px 85px;
+    padding: 0 70px 85px;
   }
 }
 
@@ -120,7 +118,6 @@
     align-items: center;
 
     margin-bottom: 0;
-    padding-top: 66px;
   }
 }
 
@@ -140,10 +137,6 @@
   }
 }
 
-.companions__user-card .user-card__wrapper {
-  padding-top: 8px;
-}
-
 .companions .user-card__user {
   @include tablet {
     @include font(24px, 22px, $font-weight-bold);
@@ -158,24 +151,17 @@
 
 .companions__level {
   position: absolute;
-  top: 18px;
-  left: 20px;
+  top: 17px;
+  left: 17px;
+
+  @include tablet {
+    top: 20px;
+    left: 20px;
+  }
 }
 
 .companions__level .level__number {
   margin-top: 5px;
-}
-
-.level__circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 60px;
-  height: 60px;
-  z-index: 1;
-
-  transform: rotate(-90deg);
 }
 
 .companions .user-card__wrapper {
@@ -190,6 +176,10 @@
   padding-right: 30px;
 
   @include font(16px, 18px, $font-weight-normal);
+
+  @include tablet {
+    @include font(20px, 23px, $font-weight-normal);
+  }
 }
 
 .companions .user-card__status {

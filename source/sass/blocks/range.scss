@@ -1,11 +1,12 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
-
-.level-range__range-wrapper {
+.range {
   padding: 23px 0;
+
+  @include desktop {
+    padding-top: 34px;
+  }
 }
 
-.level-range__range {
+.range__line {
   width: 100%;
   height: 2px;
 
@@ -14,76 +15,68 @@
   @include desktop {
     height: 3px;
   }
-}
 
-.level-range__range--current {
-  position: relative;
-  width: 132px;
-  height: 2px;
-  margin-left: 78px;
+  &--current {
+    position: relative;
+    width: 132px;
+    height: 2px;
+    margin-left: 78px;
 
-  background-color: $color-blue-ocean;
+    background-color: $color-blue-ocean;
 
-  @include desktop {
-    width: 100px;
-    height: 3px;
-    margin-left: 75px;
+    @include desktop {
+      width: 100px;
+      height: 3px;
+      margin-left: 75px;
+    }
   }
 }
 
-.level-range__range--min,
-.level-range__range--max {
+.range__position {
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+
+  background-color: $color-blue-ocean;
+  border-radius: 50%;
+
   cursor: pointer;
-}
-
-.level-range__range--min:focus,
-.level-range__range--max:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.level-range__range--min:focus,
-.level-range__range--max:focus,
-.level-range__range--min:hover,
-.level-range__range--max:hover {
-  top: -8px;
-
-  width: 19px;
-  height: 19px;
-}
-
-.level-range__range--min {
-  position: absolute;
-  top: -4px;
-  left: -5px;
-  width: 10px;
-  height: 10px;
-
-  background-color: $color-blue-ocean;
-  border-radius: 50%;
 
   @include desktop {
-    left: -13px;
-
     width: 13px;
     height: 13px;
   }
-}
 
-.level-range__range--max {
-  position: absolute;
-  top: -4px;
-  right: -5px;
-  width: 10px;
-  height: 10px;
+  &--min {
+    left: -5px;
 
-  background-color: $color-blue-ocean;
-  border-radius: 50%;
+    @include desktop {
+      left: -13px;
+    }
+  }
 
-  @include desktop {
-    right: -13px;
+  &--max {
+    right: -5px;
 
-    width: 13px;
-    height: 13px;
+    @include desktop {
+      right: -13px;
+    }
+  }
+
+  &--min:focus,
+  &--max:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
+  &--min:focus,
+  &--max:focus,
+  &--min:hover,
+  &--max:hover {
+    top: -8px;
+
+    width: 19px;
+    height: 19px;
   }
 }
 
@@ -131,21 +124,21 @@
     }
   }
 
-  &--min {
-    border-radius: 4px 0 0 4px;
-
-    cursor: pointer;
-  }
-
-  &--max {
-    border-radius: 0 4px 4px 0;
-
-    cursor: pointer;
-  }
-
   @include tablet {
     padding: 0;
   }
+}
+
+.level-range__element-min {
+  border-radius: 4px 0 0 4px;
+
+  cursor: pointer;
+}
+
+.level-range__element-max {
+  border-radius: 0 4px 4px 0;
+
+  cursor: pointer;
 }
 
 .level-range__element > input[type="number"] {

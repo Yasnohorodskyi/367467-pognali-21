@@ -1,6 +1,5 @@
-@import "variables";
 @import "mixins";
-// Что-то не так с поключением шрифтов
+@import "variables";
 @include font-face("Blogger", "bloggersans", $font-weight-normal);
 @include font-face("Blogger", "bloggersans-bold", $font-weight-bold);
 @include font-face("Blogger", "bloggersans-bolditalic", $font-weight-bold, italic);

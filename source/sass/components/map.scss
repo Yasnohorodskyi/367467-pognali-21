@@ -1,6 +1,3 @@
-@import "../common/variables";
-@import "../common/mixins";
-
 .map {
   position: relative;
 
@@ -166,36 +163,5 @@
     min-width: 324px;
 
     padding: 28px 35px;
-  }
-}
-
-.map__image {
-  position: relative;
-  min-width: 100%;
-  height: 300px;
-  margin-top: -20px;
-  z-index: 0;
-
-  object-fit: cover;
-
-  &--google {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: inherit;
-
-    border: none;
-  }
-
-  @include tablet {
-    height: 500px;
-  }
-
-  @include desktop {
-    height: 520px;
-
-    margin-top: -60px;
   }
 }

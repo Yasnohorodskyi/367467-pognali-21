@@ -1,0 +1,82 @@
+.month-module__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 21px;
+  padding: 12px 0;
+
+  border-top: 1px solid $color-grey-light;
+  border-bottom: 1px solid $color-grey-light;
+
+  @include tablet {
+    margin-bottom: 40px;
+    padding: 24px 14px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.month-module__prev,
+.month-module__next {
+  width: 9px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @include tablet {
+    width: 30px;
+    height: 36px;
+  }
+}
+
+.month-module__prev-image,
+.month-module__next-image {
+  width: 9px;
+  height: 18px;
+
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  @include tablet {
+    width: 30px;
+    height: 36px;
+  }
+}
+
+.month-module__next-image {
+  transform: rotate(180deg);
+}
+
+.month-module__text {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+
+  @include font(20px, 20px, $font-weight-bold);
+  text-align: center;
+
+  border: none;
+
+  @include tablet {
+    @include font(36px, 36px, $font-weight-bold);
+  }
+}

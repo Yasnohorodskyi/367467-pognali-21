@@ -1,0 +1,72 @@
+.up-down-button__wrapper {
+  position: relative;
+
+  grid-column: 1/-1;
+
+  display: inline-flex;
+
+  width: 100%;
+
+  @include desktop {
+    order: 1;
+    grid-column: unset;
+  }
+}
+
+.up-down-button__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 43px;
+  margin: 0 auto;
+  padding: 0 100px;
+  box-sizing: border-box;
+
+  font: inherit;
+
+  @include font(14px, 14px, $font-weight-medium);
+  color: $color-blue-ocean;
+  text-align: center;
+
+  border: 1px solid $color-telegray-light;
+  border-radius: 4px;
+
+  &:hover {
+    border-color: $color-manatee;
+  }
+
+  &:hover ~ .button-down,
+  &:hover ~ .button-up {
+    &::before,
+    &::after {
+      background-color: $color-manatee;
+    }
+  }
+
+  &:focus {
+    border-color: $color-blue-ocean;
+  }
+
+  &:focus ~ .button-down,
+  &:focus ~ .button-up {
+    &::before,
+    &::after {
+      background-color: $color-blue-ocean;
+    }
+  }
+
+  @include tablet {
+    min-width: 70px;
+    min-height: 70px;
+    padding: 0 180px;
+
+    @include font(20px, 20px, $font-weight-medium);
+  }
+
+  @include desktop {
+    min-width: 180px;
+    padding: 0 60px;
+  }
+}

@@ -1,6 +1,3 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
-
 .business-list {
   @include reset-list;
   padding: 0 25px 34px 25px;

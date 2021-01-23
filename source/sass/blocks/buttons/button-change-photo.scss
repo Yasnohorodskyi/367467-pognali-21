@@ -1,0 +1,58 @@
+.button-change-photo {
+  grid-column: 1/-1;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include font(20px, 18px, $font-weight-medium);
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-blue-sapphire;
+
+  background-color: $color-lavender;
+  border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-periwinkle-crayola;
+  }
+
+  &:active {
+    background-color: $color-lavender;
+  }
+
+  &:active .button-change-photo__title {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    padding: 23px 0 20px;
+
+    letter-spacing: 0.1em;
+
+    border-radius: 10px;
+  }
+
+  @include desktop {
+    grid-column: none;
+
+    position: absolute;
+    top: -65px;
+    right: 95px;
+
+    width: auto;
+    min-width: 190px;
+    padding-top: 17px;
+    padding-bottom: 12px;
+
+    letter-spacing: unset;
+
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.button-change-photo__text {
+  @include desktop {
+    display: none;
+  }
+}

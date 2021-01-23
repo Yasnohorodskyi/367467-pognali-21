@@ -1,6 +1,3 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
-
 .alphabet-test {
   display: none;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -121,7 +118,7 @@
 
 .alphabet-test__country-list {
   @include reset-list;
-  padding: 17px 20px 20px 12px;
+  padding: 17px 20px 12px 12px;
 
   @include tablet {
     padding-top: 0;

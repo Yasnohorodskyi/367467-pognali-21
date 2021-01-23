@@ -1,0 +1,18 @@
+.button {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+
+  @include font(17px, 30px, $font-weight-bold);
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-blue-sapphire;
+
+  border: none;
+  background-color: transparent;
+}

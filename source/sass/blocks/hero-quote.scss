@@ -1,17 +1,13 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
-
 .hero-quote {
   position: static;
 
   margin: 0;
-  padding: 40px 84px 30px 50px;
+  padding: 47px 84px 30px 50px;
 
   @include font(16px, 22px, $font-weight-light);
 
   @include tablet {
-    //margin-right: -20px;
-    padding: 53px 0 0 73px;
+    padding: 55px 0 0 73px;
   }
 
   @include desktop {

@@ -1,0 +1,23 @@
+.cross {
+  position: relative;
+
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+
+    width: 2px;
+    height: 18px;
+
+    background-color: $color-blue-ocean;
+    border-radius: 2px;
+  }
+}

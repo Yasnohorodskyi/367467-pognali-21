@@ -1,0 +1,58 @@
+.button-up {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+
+    width: 2px;
+    height: 14px;
+
+    background-color: $color-grey-greaterly;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $color-pearl-light-grey;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $color-hair-color;
+    }
+  }
+
+  @include tablet {
+    top: 25px;
+    right: 23px;
+
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      left: 9px;
+
+      height: 20px;
+    }
+  }
+}

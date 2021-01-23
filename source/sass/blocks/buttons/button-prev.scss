@@ -1,0 +1,25 @@
+.button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 134px;
+  min-height: 50px;
+
+  background-color: $color-white;
+  box-sizing: border-box;
+
+  border-radius: 20px 0 0 20px;
+
+  &::before {
+    content: "";
+
+    border-right: 9px solid $color-blue-ocean;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+
+  @include tablet {
+    min-width: unset;
+  }
+}

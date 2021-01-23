@@ -1,0 +1,57 @@
+.catalog-page {
+  background-color: $color-lightgrey;
+}
+
+.catalog-page .header {
+  background-color: $color-cobalt-blue;
+
+  &--opened {
+    background-color: $color-white;
+
+    @include desktop {
+      background-color: $color-cobalt-blue;
+    }
+  }
+
+  &--scrolled {
+    background-color: $color-white;
+  }
+
+  &--scrolled .header__menu {
+    background-color: $color-white;
+  }
+}
+
+.catalog-page .header__menu {
+  background-color: $color-cobalt-blue;
+
+  &--opened {
+    background-color: $color-white;
+
+    @include desktop {
+      background-color: $color-cobalt-blue;
+    }
+  }
+}
+
+.catalog-page .page__title {
+  @include desktop {
+    padding-top: 19px;
+  }
+}
+
+.catalog-page .page-main {
+  background-color: $color-white-smoky;
+}
+
+.catalog-page .footer {
+  position: relative;
+
+  margin-top: 0;
+
+  z-index: 4;
+
+  @include desktop {
+    margin-top: -80px;
+  }
+}

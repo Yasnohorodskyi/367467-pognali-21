@@ -1,0 +1,61 @@
+.form-page {
+  background-color: $color-lightgrey;
+}
+
+.form-page .header {
+  background-color: $color-cobalt-blue;
+
+  &--opened {
+    background-color: $color-white;
+
+    @include desktop {
+      background-color: $color-cobalt-blue;
+    }
+  }
+
+  &--scrolled {
+    background-color: $color-white;
+  }
+
+  &--scrolled .header__menu {
+    background-color: $color-white;
+  }
+}
+
+.form-page .header__menu {
+  background-color: $color-cobalt-blue;
+
+  &--opened {
+    background-color: $color-white;
+
+    @include desktop {
+      background-color: $color-cobalt-blue;
+    }
+  }
+}
+
+.form-page .page__title {
+  @include desktop {
+    padding-top: 19px;
+  }
+}
+
+.form-page .page-main {
+  margin-bottom: 13px;
+
+  @include tablet {
+    margin-bottom: 35px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.form-page .footer {
+  position: relative;
+
+  margin-top: -73px;
+
+  z-index: 4;
+}

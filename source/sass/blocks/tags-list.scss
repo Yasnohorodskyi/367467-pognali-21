@@ -1,6 +1,3 @@
-@import "../common/variables";
-@import "../common/mixins";
-
 .tags-list {
   @include reset-list;
   display: flex;

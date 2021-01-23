@@ -1,6 +1,3 @@
-@import "../common/variables";
-@import "../common/mixins";
-
 .travel-list {
   @include reset-list;
   display: flex;

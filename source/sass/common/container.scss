@@ -1,0 +1,15 @@
+.container {
+  @include container($width-mobile, 25px);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include tablet {
+    @include container($width-tablet, 40px);
+  }
+
+  @include desktop {
+    @include container($width-desktop, 60px);
+  }
+}
