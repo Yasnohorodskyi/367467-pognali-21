@@ -55,7 +55,11 @@
 .form-page .footer {
   position: relative;
 
-  margin-top: -73px;
+  margin-top: -15px;
 
   z-index: 4;
+
+  @include desktop {
+    margin-top: -73px;
+  }
 }

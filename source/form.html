@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -60,10 +62,10 @@
           <div class="header__contacts header__contacts--opened">
             <a class="header__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
                   <span class="header__telephone-image-wrapper">
-                    <svg class="header__telephone-image" viewBox="0 0 18 18">
+                    <svg class="header__telephone-image" width="18" height="18" viewBox="0 0 18 18">
                       <use xlink:href="img/sprite.svg#icon-call"></use>
                     </svg>
-                    <svg class="header__telephone-image header__telephone-image--opened" viewBox="0 0 19 17">
+                    <svg class="header__telephone-image header__telephone-image--opened" width="18" height="18" viewBox="0 0 19 17">
                       <use xlink:href="img/sprite.svg#icon-telephone"></use>
                     </svg>
                   </span>
@@ -71,7 +73,7 @@
             </a>
             <a class="header__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
                   <span class="header__email-image-wrapper">
-                    <svg class="header__mail-image" viewBox="0 0 45 45">
+                    <svg class="header__mail-image" width="18" height="18" viewBox="0 0 45 45">
                       <use xlink:href="img/sprite.svg#icon-mail"></use>
                     </svg>
                   </span>
@@ -81,17 +83,17 @@
         </div>
         <div class="header__social header__social--opened">
           <a class="header__social-link header__social-link--fb" aria-label="Погнали в Facebook" href="#">
-            <svg viewBox="0 0 14 28">
+            <svg width="14" height="28" viewBox="0 0 14 28">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
           <a class="header__social-link header__social-link--vk" aria-label="Погнали Вконтакте" href="#">
-            <svg viewBox="0 0 31 16">
+            <svg width="31" height="16" viewBox="0 0 31 16">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
           <a class="header__social-link header__social-link--insta" aria-label="Погнали в Instagram" href="#">
-            <svg viewBox="0 0 24 24">
+            <svg width="24" height="24" viewBox="0 0 24 24">
               <use xlink:href="img/sprite.svg#icon-inst"></use>
             </svg>
           </a>
@@ -105,107 +107,108 @@
         <h1 class="page__title">Направления</h1>
       </div>
     </div>
-    <section class="user-profile">
-      <div class="container user-profile__container">
-        <h2 class="visually-hidden">Профиль пользователя Петя Демин</h2>
-        <div class="user-card user-profile__card">
-          <form class="user-profile__form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="level user-profile__level">
-              <span class="level__number">80</span>
-              <span class="level__text">level</span>
-              <svg class="level__circle level__circle--form" viewBox="0 0 100 100">
-                <circle r="47" cx="50" cy="50"
-                        fill="none" stroke-width="3"
-                        stroke="#FF8D30"
-                        stroke-dasharray="240 307.7"
-                        stroke-linecap="square">
-                </circle>
-              </svg>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <section class="user-profile">
+        <div class="container user-profile__container">
+          <h2 class="visually-hidden">Профиль пользователя Петя Демин</h2>
+          <div class="user-card user-profile__card">
+            <div class="user-profile__user-wrapper">
+              <div class="level user-profile__level">
+                <span class="level__number">80</span>
+                <span class="level__text">level</span>
+                <svg class="level__circle level__circle--form" width="100" height="100" viewBox="0 0 100 100">
+                  <circle r="47" cx="50" cy="50"
+                          fill="none" stroke-width="3"
+                          stroke="#FF8D30"
+                          stroke-dasharray="240 307.7"
+                          stroke-linecap="square">
+                  </circle>
+                </svg>
+              </div>
+              <picture class="user-profile__photo">
+                <source type="image/webp" srcset="img/demin-size-100@2x.webp">
+                <img  src="img/demin-size-100@2x.png" alt="Петя Демин">
+              </picture>
+              <label class="button-change-photo">
+                <input class="user-profile__change-photo" type="file" name="change-photo">
+                <span class="button-change-photo__title"><span class="button-change-photo__text">Сменить </span>фото</span>
+              </label>
+              <div class="user-profile__wrapper user-profile__tags-wrapper">
+                <h3 class="user-profile__legend user-profile__tags-legend">Тэги</h3>
+                <label class="visually-hidden" for="user-profile__tags">Тэги</label>
+                <textarea class="user-profile__tags-editor" name="tags" id="user-profile__tags" rows="1">#бургер #бар #футбол #концерт #крафт</textarea>
+              </div>
+              <div class="user-profile__wrapper user-profile__travel-wrapper">
+                <h3 class="user-profile__legend">Транспорт</h3>
+                <ul class="user-profile__travel-list travel-list">
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="plane" id="travel-by-plane" checked>
+                    <label class="user-profile__travel-label" for="travel-by-plane" title="Самолетом">
+                      <svg class="user-profile__travel-image" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="bus" id="travel-by-bus" checked>
+                    <label class="user-profile__travel-label" for="travel-by-bus" title="На автобусе">
+                      <svg class="user-profile__travel-image" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="cycle" id="travel-by-cycle">
+                    <label class="user-profile__travel-label" for="travel-by-cycle" title="На велосипеде">
+                      <svg class="user-profile__travel-image" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="walk" id="travel-walk" checked>
+                    <label class="user-profile__travel-label" for="travel-walk" title="Пешком">
+                      <svg class="user-profile__travel-image" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
+                      </svg>
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <picture class="user-profile__photo">
-              <source type="image/webp" srcset="img/demin-size-100@2x.webp">
-              <img  src="img/demin-size-100@2x.png" alt="Петя Демин">
-            </picture>
-            <label class="button-change-photo">
-              <input class="user-profile__change-photo" type="file" name="change-photo">
-              <span class="button-change-photo__title"><span class="button-change-photo__text">Сменить </span>фото</span>
-            </label>
-            <div class="user-profile__wrapper user-profile__tags-wrapper">
-              <h3 class="user-profile__legend user-profile__tags-legend">Тэги</h3>
-              <label class="visually-hidden" for="user-profile__tags">Тэги</label>
-              <textarea class="user-profile__tags-editor" name="tags" id="user-profile__tags" rows="1">#бургер #бар #футбол #концерт #крафт</textarea>
-            </div>
-            <div class="user-profile__wrapper user-profile__travel-wrapper">
-              <h3 class="user-profile__legend">Транспорт</h3>
-              <ul class="user-profile__travel-list travel-list">
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="plane" id="travel-by-plane" checked>
-                  <label class="user-profile__travel-label" for="travel-by-plane" title="Самолетом">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-plane"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="bus" id="travel-by-bus" checked>
-                  <label class="user-profile__travel-label" for="travel-by-bus" title="На автобусе">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-bus"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="cycle" id="travel-by-cycle">
-                  <label class="user-profile__travel-label" for="travel-by-cycle" title="На велосипеде">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-bicycle"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="walk" id="travel-walk" checked>
-                  <label class="user-profile__travel-label" for="travel-walk" title="Пешком">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-run"></use>
-                    </svg>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="user-plans">
-      <div class="user-plans__container container">
-        <h2 class="user-plans__title title">Мои планы:</h2>
-        <ol class="user-plans__list">
-          <li class="user-plans__item plan-item">
-            <div class="plan-item__col-1">
-              <span class="plan-item__number">1.</span>
-              <p class="plan-item__countries">Франция, Италия</p>
-            </div>
-            <div class="plan-item__col-2">
-              <p class="plan-item__companions plan-item__text">3 попутчика</p>
-              <p class="plan-item__dates plan-item__text">26 мар &mdash; 29 мар</p>
-            </div>
-            <a class="plan-item__change" href="#">Изменить</a>
-          </li>
-          <li class="user-plans__item plan-item">
-            <div class="plan-item__col-1">
-              <span class="plan-item__number">2.</span>
-              <p class="plan-item__countries">Таиланд, Индонезия</p>
-            </div>
-            <div class="plan-item__col-2">
-              <p class="plan-item__companions plan-item__text">1 попутчик</p>
-              <p class="plan-item__dates plan-item__text">1 июл &mdash; 15 июл</p>
-            </div>
-            <a class="plan-item__change" href="#">Изменить</a>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <section class="new-plan">
+      </section>
+      <section class="user-plans">
+        <div class="user-plans__container container">
+          <h2 class="user-plans__title title">Мои планы:</h2>
+          <ol class="user-plans__list">
+            <li class="user-plans__item plan-item">
+              <div class="plan-item__col-1">
+                <span class="plan-item__number">1.</span>
+                <p class="plan-item__countries">Франция, Италия</p>
+              </div>
+              <div class="plan-item__col-2">
+                <p class="plan-item__companions plan-item__text">3 попутчика</p>
+                <p class="plan-item__dates plan-item__text">26 мар &mdash; 29 мар</p>
+              </div>
+              <a class="plan-item__change" href="#">Изменить</a>
+            </li>
+            <li class="user-plans__item plan-item">
+              <div class="plan-item__col-1">
+                <span class="plan-item__number">2.</span>
+                <p class="plan-item__countries">Таиланд, Индонезия</p>
+              </div>
+              <div class="plan-item__col-2">
+                <p class="plan-item__companions plan-item__text">1 попутчик</p>
+                <p class="plan-item__dates plan-item__text">1 июл &mdash; 15 июл</p>
+              </div>
+              <a class="plan-item__change" href="#">Изменить</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="new-plan">
       <div class="container new-plan__container">
         <div class="new-plan__wrapper">
           <h2 class="new-plan__title title">Добавить план:</h2>
@@ -216,7 +219,6 @@
           </ul>
         </div>
         <div class="new-plan__slider slider">
-          <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="slider__item slider-item step-one" id="step-1">
               <div class="slider-item__step-one-wrapper">
                 <h3 class="slider-item__title">
@@ -261,13 +263,13 @@
                 <label class="visually-hidden">Выбор месяца</label>
                 <div class="month-module__wrapper">
                   <button class="month-module__prev" type="button">
-                    <svg class="month-module__prev-image">
+                    <svg class="month-module__prev-image" width="9" height="18">
                       <use xlink:href="img/sprite.svg#left-arrow"></use>
                     </svg>
                   </button>
                   <label class="month-module__text">Март 2019</label>
                   <button class="month-module__next" type="button">
-                    <svg class="month-module__next-image">
+                    <svg class="month-module__next-image" width="9" height="18">
                       <use xlink:href="img/sprite.svg#left-arrow"></use>
                     </svg>
                   </button>
@@ -461,7 +463,7 @@
                     <label class="route-module__wrapper-label">
                       <input class="route-module__input" type="text" value="Босния и Герцеговина" name="route-item" readonly>
                     </label>
-                    <svg class="route-module__arrow-down">
+                    <svg class="route-module__arrow-down" width="11" height="8">
                       <use xlink:href="img/sprite.svg#arrow-down"></use>
                     </svg>
                   </div>
@@ -479,7 +481,7 @@
                     <label class="route-module__wrapper-label">
                       <input class="route-module__input" type="text" value="Чехия" name="route-item" readonly>
                     </label>
-                    <svg class="route-module__arrow-down">
+                    <svg class="route-module__arrow-down" width="11" height="8">
                       <use xlink:href="img/sprite.svg#arrow-down"></use>
                     </svg>
                   </div>
@@ -495,7 +497,7 @@
                 <div class="slider-item__module route-module route-module__select">
                   <div class="route-module__wrapper">
                     <input class="route-module__input" type="text" value="Выберите страну" readonly>
-                    <svg class="route-module__arrow-down">
+                    <svg class="route-module__arrow-down" width="11" height="8">
                       <use xlink:href="img/sprite.svg#arrow-down"></use>
                     </svg>
                     <button class="route__button button-close" type="button" aria-label="Закрыть"></button>
@@ -904,10 +906,10 @@
                 <a class="slider-item__prev-step button" href="#step-2">На шаг назад</a>
               </div>
             </div>
-          </form>
         </div>
       </div>
     </section>
+    </form>
   </main>
   <footer class="page__footer footer">
   <div class="container footer__container">
@@ -924,21 +926,21 @@
     <div class="footer__social">
       <a class="footer__social-link footer__social-link--fb" aria-label="Погнали в Facebook" href="#">
           <span class="footer__social-image-wrapper">
-            <svg class="footer__social-image" viewBox="0 0 14 28">
+            <svg class="footer__social-image" width="14" height="28" viewBox="0 0 14 28">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </span>
       </a>
       <a class="footer__social-link footer__social-link--vk" aria-label="Погнали Вконтакте" href="#">
           <span class="footer__social-image-wrapper">
-            <svg class="footer__social-image" viewBox="0 0 31 16">
+            <svg class="footer__social-image" width="31" height="16" viewBox="0 0 31 16">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </span>
       </a>
       <a class="footer__social-link footer__social-link--insta" aria-label="Погнали в Instagram" href="#">
           <span class="footer__social-image-wrapper">
-            <svg class="footer__social-image" viewBox="0 0 24 24">
+            <svg class="footer__social-image" width="24" height="24" viewBox="0 0 24 24">
               <use xlink:href="img/sprite.svg#icon-inst"></use>
             </svg>
           </span>
@@ -947,7 +949,7 @@
     <div class="footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" >
         <span class="copyright__title">Разработано</span>
-        <svg class="copyright__logo" viewBox="0 0 60 60">
+        <svg class="copyright__logo" width="27" height="34" viewBox="0 0 60 60">
           <use xlink:href="img/sprite.svg#htmlacademy"></use>
         </svg>
       </a>

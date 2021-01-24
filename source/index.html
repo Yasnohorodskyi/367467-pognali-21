@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -60,10 +62,10 @@
             <div class="header__contacts header__contacts--opened">
               <a class="header__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
                 <span class="header__telephone-image-wrapper">
-                  <svg class="header__telephone-image" viewBox="0 0 18 18">
+                  <svg class="header__telephone-image" width="18" height="18" viewBox="0 0 18 18">
                     <use xlink:href="img/sprite.svg#icon-call"></use>
                   </svg>
-                  <svg class="header__telephone-image header__telephone-image--opened" viewBox="0 0 19 17">
+                  <svg class="header__telephone-image header__telephone-image--opened" width="18" height="18" viewBox="0 0 19 17">
                     <use xlink:href="img/sprite.svg#icon-telephone"></use>
                   </svg>
                 </span>
@@ -71,7 +73,7 @@
               </a>
               <a class="header__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
                 <span class="header__email-image-wrapper">
-                  <svg class="header__mail-image" viewBox="0 0 45 45">
+                  <svg class="header__mail-image" width="18" height="18" viewBox="0 0 45 45">
                     <use xlink:href="img/sprite.svg#icon-mail"></use>
                   </svg>
                 </span>
@@ -81,17 +83,17 @@
           </div>
           <div class="header__social header__social--opened">
             <a class="header__social-link header__social-link--fb" aria-label="Погнали в Facebook" href="#">
-              <svg viewBox="0 0 14 28">
+              <svg width="14" height="28" viewBox="0 0 14 28">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
             <a class="header__social-link header__social-link--vk" aria-label="Погнали Вконтакте" href="#">
-              <svg viewBox="0 0 31 16">
+              <svg width="31" height="16" viewBox="0 0 31 16">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
             <a class="header__social-link header__social-link--insta" aria-label="Погнали в Instagram" href="#">
-              <svg viewBox="0 0 24 24">
+              <svg width="24" height="24" viewBox="0 0 24 24">
                 <use xlink:href="img/sprite.svg#icon-inst"></use>
               </svg>
             </a>
@@ -132,14 +134,14 @@
           <div class="hero__contacts">
             <a class="hero__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
               <span class="hero__telephone-image-wrapper">
-                <svg class="hero__telephone-image" viewBox="0 0 18 18">
+                <svg class="hero__telephone-image" width="18" height="18" viewBox="0 0 18 18">
                   <use xlink:href="img/sprite.svg#icon-call"></use>
                 </svg>
               </span>
             </a>
             <a class="hero__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
               <span class="hero__email-image-wrapper">
-                <svg class="hero__mail-image" viewBox="0 0 45 45">
+                <svg class="hero__mail-image" width="18" height="18" viewBox="0 0 45 45">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
               </span>
@@ -281,7 +283,7 @@
           <ul class="cards__list companions__cards-list">
             <li class="cards__item user-card companions__user-card">
               <div class="user-card__level level companions__level">
-                <svg class="level__circle" viewBox="0 0 66 66">
+                <svg class="level__circle" width="60" height="60" viewBox="0 0 66 66">
                   <circle r="31" cx="33" cy="33"
                           fill="none" stroke-width="5"
                           stroke="#FF8D30"
@@ -343,22 +345,22 @@
               </ul>
               <ul class="user-card__travel-list travel-list">
                 <li class="travel-list__item" data-hover="Авиаперелет">
-                  <svg class="travel-list__image travel-list__image--plane travel-list__image--checked">
+                  <svg class="travel-list__image travel-list__image--plane travel-list__image--checked" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-plane"></use>
                   </svg>
                 </li>
                 <li class="travel-list__item" data-hover="Автотранспорт">
-                  <svg class="travel-list__image travel-list__image--bus">
+                  <svg class="travel-list__image travel-list__image--bus" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-bus"></use>
                   </svg>
                 </li>
                 <li class="travel-list__item" data-hover="Велосипед">
-                  <svg class="travel-list__image travel-list__image--circle">
+                  <svg class="travel-list__image travel-list__image--circle" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                   </svg>
                 </li>
                 <li class="travel-list__item" data-hover="Пешком">
-                  <svg class="travel-list__image travel-list__image--walk">
+                  <svg class="travel-list__image travel-list__image--walk" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-run"></use>
                   </svg>
                 </li>
@@ -366,7 +368,7 @@
             </li>
             <li class="cards__item user-card">
               <div class="user-card__level level companions__level">
-                <svg class="level__circle" viewBox="0 0 66 66">
+                <svg class="level__circle" width="60" height="60" viewBox="0 0 66 66">
                   <circle r="30" cx="33" cy="33"
                           fill="none" stroke-width="6"
                           stroke="#FF8D30"
@@ -419,22 +421,22 @@
               </ul>
               <ul class="user-card__travel-list travel-list">
                 <li class="travel-list__item" data-hover="Авиаперелет">
-                  <svg class="travel-list__image travel-list__image--plane travel-list__image--checked">
+                  <svg class="travel-list__image travel-list__image--plane travel-list__image--checked" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-plane"></use>
                   </svg>
                 </li>
                 <li class="travel-list__item" data-hover="Автотранспорт">
-                  <svg class="travel-list__image travel-list__image--bus travel-list__image--checked">
+                  <svg class="travel-list__image travel-list__image--bus travel-list__image--checked" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-bus"></use>
                   </svg>
                 </li>
                 <li class="travel-list__item" data-hover="Велосипед">
-                  <svg class="travel-list__image travel-list__image--circle">
+                  <svg class="travel-list__image travel-list__image--circle" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                   </svg>
                 </li>
                 <li class="travel-list__item" data-hover="Пешком">
-                  <svg class="travel-list__image travel-list__image--walk travel-list__image--checked">
+                  <svg class="travel-list__image travel-list__image--walk travel-list__image--checked" width="24" height="24">
                     <use xlink:href="img/sprite.svg#icon-run"></use>
                   </svg>
                 </li>
@@ -484,7 +486,7 @@
           </div>
           <a class="button-business" href="#">
             <span class="button-business__image-wrapper">
-              <svg class="button-business__image" viewBox="0 0 26 26">
+              <svg class="button-business__image" width="26" height="26" viewBox="0 0 26 26">
                 <use xlink:href="img/sprite.svg#icon-businessman"></use>
               </svg>
             </span>
@@ -535,7 +537,7 @@
           <div class="feedback__contacts">
             <a class="feedback__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
               <span class="feedback__telephone-image-wrapper">
-                <svg class="feedback__telephone-image" viewBox="0 0 19 17">
+                <svg class="feedback__telephone-image" width="18" height="18" viewBox="0 0 19 17">
                   <use xlink:href="img/sprite.svg#icon-telephone"></use>
                 </svg>
               </span>
@@ -543,7 +545,7 @@
             </a>
             <a class="feedback__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
               <span class="feedback__email-image-wrapper">
-                <svg class="feedback__mail-image" viewBox="0 0 45 45">
+                <svg class="feedback__mail-image" width="18" height="18" viewBox="0 0 45 45">
                   <use xlink:href="img/sprite.svg#icon-profile-mail"></use>
                 </svg>
               </span>
@@ -559,7 +561,7 @@
           <h2 class="visually-hidden">Как нас найти?</h2>
           <address class="map__address">
             <span class="map__address-image-wrapper">
-              <svg class="map__address-image" viewBox="0 0 21 21">
+              <svg class="map__address-image" width="21" height="21" viewBox="0 0 21 21">
                 <use xlink:href="img/sprite.svg#icon-location"></use>
               </svg>
             </span>
@@ -600,21 +602,21 @@
       <div class="footer__social">
         <a class="footer__social-link footer__social-link--fb" aria-label="Погнали в Facebook" href="#">
           <span class="footer__social-image-wrapper">
-            <svg class="footer__social-image" viewBox="0 0 14 28">
+            <svg class="footer__social-image" width="14" height="28" viewBox="0 0 14 28">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </span>
         </a>
         <a class="footer__social-link footer__social-link--vk" aria-label="Погнали Вконтакте" href="#">
           <span class="footer__social-image-wrapper">
-            <svg class="footer__social-image" viewBox="0 0 31 16">
+            <svg class="footer__social-image" width="31" height="16" viewBox="0 0 31 16">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </span>
         </a>
         <a class="footer__social-link footer__social-link--insta" aria-label="Погнали в Instagram" href="#">
           <span class="footer__social-image-wrapper">
-            <svg class="footer__social-image" viewBox="0 0 24 24">
+            <svg class="footer__social-image" width="24" height="24" viewBox="0 0 24 24">
               <use xlink:href="img/sprite.svg#icon-inst"></use>
             </svg>
           </span>
@@ -623,7 +625,7 @@
       <div class="footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" >
           <span class="copyright__title">Разработано</span>
-          <svg class="copyright__logo" viewBox="0 0 60 60">
+          <svg class="copyright__logo" width="27" height="34" viewBox="0 0 60 60">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
